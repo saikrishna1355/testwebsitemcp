@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function Terms() { return <main className="legal container"><Link href="/">← Back to Aarogya</Link><h1>Terms of this preview</h1><p>Aarogya is a fictional concept brand. All products, benefits, add-ons and prices are mock examples. No insurance contract, offer, regulatory approval or eligibility decision is created by using this calculator.</p><p>Premiums are illustrative. Consult an insurer for actual pricing, taxes, coverage, exclusions, waiting periods and eligibility. No purchases or payments are available here.</p></main>; }
