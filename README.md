@@ -38,4 +38,8 @@ npm start
 
 An age-adjusted base is scaled by the square root of selected coverage / ₹3 lakh. Additional covered adults use the same age bands; children use a fixed illustrative member rate. Add-ons are annual per-policy amounts. No tax or tenure discount is included. Full tenure total is annual premium × years; monthly equivalent is not an instalment offer. For parents coverage, the proposer is not insured. Input ages are demo bounds, not eligibility statements.
 
-All brand, product and pricing information is fictional. No authentication, payment, analytics, database or insurer integration is implemented. Details remain in page memory. Sign In explains preview availability; Get Started offers a printable review. Actual insurance terms and taxes must be confirmed with an insurer.
+All brand, product and pricing information is fictional. No authentication, payment, analytics, database or insurer integration is implemented. Calculation inputs are sent to the shared server API and are not persisted by the application. Sign In explains preview availability; Get Started offers a printable review. Actual insurance terms and taxes must be confirmed with an insurer.
+
+## Agent access
+
+The website, remote MCP tool, and browser WebMCP integration share the server calculation. See [agent setup](docs/agent-setup.md) for deployment, client configuration, API inputs, and compatibility limits. New endpoints: `/api/premium`, `/api/mcp`, and `/agents`.
