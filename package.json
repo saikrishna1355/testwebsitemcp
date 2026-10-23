@@ -1,0 +1,17 @@
+{
+  "name": "shriram-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shriram insurance website with a premium calculator and WebMCP integration so Kiro (or any MCP-aware agent) can calculate premiums via the page.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}
