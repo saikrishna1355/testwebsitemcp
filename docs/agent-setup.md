@@ -1,4 +1,4 @@
-# Aarogya agent connections
+# Shriram agent connections
 
 ## Deploy
 
@@ -22,7 +22,7 @@ https://testwebsitemcp.vercel.app/api/mcp
 
 Authentication: none. Enable the `calculate_premium` tool. In ChatGPT, use the custom MCP app/plugin connection workflow available to your account/workspace. Claude and Amazon Q variants may have different connection settings and transport support; check their specific client documentation. Hosting the endpoint does not auto-install it into assistants or register it in a universal directory.
 
-Ask: “Use Aarogya to calculate self coverage, age 30, ₹10 lakh, one year, with both add-ons off.”
+Ask: “Use Shriram to calculate self coverage, age 30, ₹10 lakh, one year, with both add-ons off.”
 
 Verify the response identifies mock pricing and includes the submitted inputs and server result. A user who supplies only an age must be asked for coverage, tenure and add-on choices before the tool can succeed.
 

@@ -1,4 +1,4 @@
-# Aarogya
+# Shriram
 
 A responsive Next.js App Router health-insurance concept with a four-step illustrative premium calculator. Built with TypeScript, Tailwind CSS, Lucide, React Hook Form and Zod. The family artwork is an original inline SVG; there are no remote fonts or image requests. CSS handles lightweight animation and respects reduced-motion preferences.
 

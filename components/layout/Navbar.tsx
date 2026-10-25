@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { ArrowUpRight, HeartPulse, Menu, X } from 'lucide-react';
-export function Brand() { return <a href="#" className="brand" aria-label="Aarogya home"><span><HeartPulse size={24} /></span>aarogya<span className="brand-dot">.</span></a>; }
+export function Brand() { return <a href="#" className="brand" aria-label="Shriram home"><span><HeartPulse size={24} /></span>Shriram<span className="brand-dot">.</span></a>; }
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [notice, setNotice] = useState(false);

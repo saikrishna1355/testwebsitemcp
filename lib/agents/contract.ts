@@ -3,7 +3,7 @@ import { premiumSchema } from '@/lib/validation/premium-schema';
 import type { PremiumInput } from '@/types/insurance';
 
 export const TOOL_NAME = 'calculate_premium';
-export const TOOL_DESCRIPTION = 'Calculate an illustrative Aarogya health insurance premium using Aarogya’s own pricing engine. Ask the user for missing required details; never invent ages, coverage, tenure or add-on choices. sum is in INR lakh, not rupees. For parents coverage, age is the proposer age and the proposer is not covered. Return the tool’s amounts and disclaimer faithfully; never substitute a guessed premium if the tool fails. This does not purchase insurance or establish eligibility.';
+export const TOOL_DESCRIPTION = 'Calculate an illustrative Shriram health insurance premium using Shriram’s own pricing engine. Ask the user for missing required details; never invent ages, coverage, tenure or add-on choices. sum is in INR lakh, not rupees. For parents coverage, age is the proposer age and the proposer is not covered. Return the tool’s amounts and disclaimer faithfully; never substitute a guessed premium if the tool fails. This does not purchase insurance or establish eligibility.';
 export const agentInputSchema = z.strictObject({
   coverage: z.enum(['self', 'couple', 'children', 'family', 'parents']).describe('People to insure. family includes proposer, spouse and children.'),
   age: z.number().int().min(18).max(100).describe('Proposer age in whole years.'),

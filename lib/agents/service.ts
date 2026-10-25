@@ -2,7 +2,7 @@ import { z } from 'zod';
 import { calculatePremium } from '@/lib/pricing/premium-calculator';
 import { normalizeInput, toAgentInput } from './contract';
 
-export const PRICING_VERSION = 'aarogya-mock-v1';
+export const PRICING_VERSION = 'Shriram-mock-v1';
 export function createEstimate(input: unknown) {
   const normalized = normalizeInput(input);
   return {
@@ -10,7 +10,7 @@ export function createEstimate(input: unknown) {
     estimateId: crypto.randomUUID(),
     calculatedAt: new Date().toISOString(),
     pricingVersion: PRICING_VERSION,
-    source: 'Aarogya premium calculator',
+    source: 'Shriram premium calculator',
     sourceUrl: process.env.SITE_URL || 'https://testwebsitemcp.vercel.app/',
     currency: 'INR' as const,
     illustrative: true as const,

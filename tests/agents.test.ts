@@ -33,7 +33,7 @@ test('official MCP client initializes, discovers tool and gets the same estimate
   const transport = new StreamableHTTPClientTransport(new URL('http://localhost/api/mcp'), {
     fetch: async (url, init) => mcpPost(new Request(url, init)),
   });
-  const client = new Client({ name: 'aarogya-test-client', version: '1.0.0' });
+  const client = new Client({ name: 'Shriram-test-client', version: '1.0.0' });
   try {
     await client.connect(transport);
     const tools = await client.listTools();

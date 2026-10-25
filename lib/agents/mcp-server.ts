@@ -4,11 +4,11 @@ import { agentInputSchema, TOOL_DESCRIPTION, TOOL_NAME } from './contract';
 import { createEstimate, validationFailure } from './service';
 
 export function createMcpServer() {
-  const server = new McpServer({ name: 'aarogya-premium', version: '1.0.0' }, {
-    instructions: 'Use calculate_premium for Aarogya estimates. Ask for missing inputs. Never estimate locally or report success after a tool error. Always identify results as illustrative mock pricing, not actual insurer quotes.',
+  const server = new McpServer({ name: 'Shriram-premium', version: '1.0.0' }, {
+    instructions: 'Use calculate_premium for Shriram estimates. Ask for missing inputs. Never estimate locally or report success after a tool error. Always identify results as illustrative mock pricing, not actual insurer quotes.',
   });
   server.registerTool(TOOL_NAME, {
-    title: 'Calculate Aarogya premium',
+    title: 'Calculate Shriram premium',
     description: TOOL_DESCRIPTION,
     inputSchema: agentInputSchema,
     annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
