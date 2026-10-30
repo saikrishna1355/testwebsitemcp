@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { PRODUCTS, DEFAULT_PLAN, calculatePremium } from "@/lib/insurance";
+import WebMcp from "./WebMcp";
 
 function formatINR(n) {
   return new Intl.NumberFormat("en-IN", {
@@ -34,8 +35,23 @@ export default function Home() {
     setForm(DEFAULT_PLAN);
   }
 
+  // Called by the WebMCP `calculate_premium` tool so an agent's calculation is
+  // reflected back into the visible form (which recomputes the quote).
+  const onAgentCalculate = useCallback((input) => {
+    setForm((f) => ({
+      ...f,
+      ...(input.productId !== undefined && { productId: input.productId }),
+      ...(input.coverage !== undefined && { coverage: Number(input.coverage) }),
+      ...(input.age !== undefined && { age: Number(input.age) }),
+      ...(input.term !== undefined && { term: Number(input.term) }),
+      ...(input.smoker !== undefined && { smoker: Boolean(input.smoker) }),
+    }));
+  }, []);
+
   return (
     <>
+      <WebMcp onCalculate={onAgentCalculate} />
+
       <header className="header">
         <h1>Shriram Website</h1>
         <p>Insurance Premium Calculator</p>
